@@ -27,7 +27,9 @@ int main(){
 	for(int i = 0;i < LEN;i++){
 		cout << strNum[i][0];
 		cout << strNum[i][1] << endl;
-		string v1 = strNum[i][0] + strNum[i][1];
+		string v1;
+		v1+=strNum[i][0];
+		v1+= strNum[i][1];
 		cout << "v1:" << v1 << endl;
 	}
 	system("pause");
