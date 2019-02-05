@@ -1,0 +1,28 @@
+﻿Build started 05.02.2019 18:49:08.
+     1>Project "d:\Users\astd32\documents\visual studio 2012\Projects\NewClassRoom\NewClassRoom\NewClassRoom.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(124): error C2819: type 'List' does not have an overloaded member 'operator ->'
+                 d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(22) : see declaration of 'List'
+                 did you intend to use '.' instead?
+     1>d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(124): error C2232: '->List::size' : left operand has 'class' type, use '.'
+                 d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(22) : see declaration of 'List'
+     1>d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(125): error C2819: type 'List' does not have an overloaded member 'operator ->'
+                 d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(22) : see declaration of 'List'
+                 did you intend to use '.' instead?
+     1>d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(125): error C2232: '->List::size' : left operand has 'class' type, use '.'
+     1>d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(127): error C2819: type 'List' does not have an overloaded member 'operator ->'
+                 d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(22) : see declaration of 'List'
+                 did you intend to use '.' instead?
+     1>d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(127): error C2232: '->List::size' : left operand has 'class' type, use '.'
+     1>d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(130): error C2065: 's' : undeclared identifier
+     1>d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(131): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'const List' (or there is no acceptable conversion)
+                 d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(109): could be 'int List::operator [](int)'
+                 while trying to match the argument list '(const List, int)'
+     1>d:\users\astd32\documents\visual studio 2012\projects\newclassroom\newclassroom\main.cpp(131): error C2088: '[' : illegal for class
+     1>Done Building Project "d:\Users\astd32\documents\visual studio 2012\Projects\NewClassRoom\NewClassRoom\NewClassRoom.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.50
