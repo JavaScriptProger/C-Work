@@ -1,0 +1,60 @@
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+using namespace std;
+
+namespace std
+{
+	int round(double d)
+    {
+        return static_cast<int>(d + 0.5);
+    }
+};
+
+#define LEN 25
+
+int arr[25] = {1,2,3,4,5,6,7,8,9,10,11,12,13,13,14,15,16,17,18,19,20,21,22,23,24};
+
+void sort(){
+	for(int i = 0; i < 10 - 1; i++){
+			int currentMin = arr[i];
+			int currentMinIndex = i;
+
+			for(int j = i + 1; j < LEN; j++){
+				if(currentMin > arr[j]){
+					currentMin = arr[j];
+					currentMinIndex = j;
+				}
+			}
+           
+			if(currentMinIndex != i){
+				arr[currentMinIndex] = arr[i];
+				arr[i] = currentMin;
+			}
+		}
+};
+
+int main(){
+	sort();
+
+	int num = 5;
+	int center = round((25 / 2));
+	cout << center << endl;
+
+	for(int i=0;i<LEN;i++){
+		if(center > num){
+			center--;
+		} else {
+			center++;
+		}
+
+		if(num == center) {
+			cout << "succses" << endl;
+			cout << center << endl;
+			break;
+		}
+	}
+	system("pause");
+	return 0;
+}
