@@ -1,0 +1,66 @@
+#include <iostream>
+#include <exception>
+#include <stdlib.h>
+using namespace std;
+
+template <class T, int length> 
+class Container {
+private:
+	T input[length];
+	int index;
+
+	Container(Container t1, Container t2) {
+		interator i;
+		for(i = t1.start();i < t1.end();i++){
+			addElement(*i);
+		};
+		for(i = t2.start();i < t2.end();i++){
+			addElement(*i);
+		};
+	};
+public:
+	Container(){
+		index = -1;
+	};
+
+	typedef int* interator;
+
+	void addElement(int value){
+		index++;
+		input[index] = value;
+	};
+
+	int getElement(){
+		int v = input[index];
+		index--;
+		return v;
+	};
+
+	interator start(){
+		return input + index; 
+	};
+
+	interator end(){
+		return input;
+	};
+};
+
+
+int main(){
+	Container<int, 10> container;
+	container.addElement(1);
+	container.addElement(2);
+	container.addElement(3);
+	container.addElement(4);
+	container.addElement(5);
+	container.addElement(6);
+	container.addElement(7);
+	container.addElement(8);
+	container.addElement(9);
+	for(int i = 0;i < 10;i++){
+		cout << container.getElement() << endl;
+	};
+
+	system("pause");
+	return 0;
+}
