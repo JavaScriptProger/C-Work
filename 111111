@@ -1,0 +1,30 @@
+#include <iostream>
+#include <stdlib.h>
+#include <string.h>
+using namespace std;
+
+#define LEN 1
+
+int main(){
+	string commands[LEN] = {
+		"MOVE 100"
+	};
+
+	for(int i = 0;i < LEN; i++){
+		string curr = commands[i];
+		int strLen = curr.length;
+		string command = "";
+		string value = "";
+
+		for(int j = 0;j < strLen;j++){
+			string symbol = string(curr[j],1);
+
+			if(symbol == string("1",1)){
+
+			}
+		}
+	}
+
+	system("pause");
+	return 0;
+}
