@@ -1,0 +1,48 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+class Node
+{
+public:
+	Node *right;
+	Node *left;
+	int value;
+
+	Node(int in){
+		this->right = nullptr;
+		this->left = nullptr;
+		this->value = in;
+	};
+};
+
+class Tree
+{
+public:
+	Node *root;
+
+	Tree(){
+		root = nullptr;
+	};
+
+	void Add(int in){
+		if(root == nullptr){
+			root = new Node(in);
+		} else {
+			Node *temp = root;
+			while(temp != nullptr){
+				if(in < temp->value){
+					temp = temp->left;
+				} else {
+					temp = temp->right;
+				}
+			}
+		}
+	}
+};
+
+int main(){
+	cout << "test" << endl;
+	system("pause");
+	return 0;
+}
