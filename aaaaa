@@ -1,0 +1,57 @@
+#include <iostream>
+#include <stdlib.h>
+#include <string>
+using namespace std;
+
+bool isPrime(int number)
+{
+    for (int a = 2; a < number; a++) {
+        if (number % a == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+class Array
+{
+private:
+	Array *array[10];
+
+	Array(int value){
+		for (int i = 0; i < 10; i++){
+			array[i] = new Array(i);
+		}
+	};
+public:
+	class Builder
+	{
+	private:
+		Array *array[10];
+	public:
+		Builder(int value){
+			for (int i = 0; i < 10; i++){
+				array[i] = new Array(0);
+				for (int currentNum = 2; ; currentNum++) {
+					if (isPrime(currentNum)) {
+						
+					}
+				}
+			}
+		};
+
+
+
+		Array* build(){
+			return new Array(1);
+		};
+	};
+};
+
+int main()
+{
+	Array arr = Array::Builder().build();
+
+	system("pause");
+	return 0;
+}
